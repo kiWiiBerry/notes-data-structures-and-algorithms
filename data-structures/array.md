@@ -42,7 +42,7 @@ int size = list.size();         // get the size of list
 
 
 
-1. Convert List to Array:
+#### 1. Convert List to Array:
 
 ```text
 Object[] objects = list.toArray();
@@ -50,14 +50,33 @@ Object[] objects = list.toArray();
 String[] objects1 = list.toArray(new String[0]);
 ```
 
-2. Convert Array to List
+#### 2. Convert Array to List
 
 ```text
 String[] values = new String[]{ "one", "two", "three" };
 
 List<String> list = Arrays.asList(values);
 List<String> names = Arrays.asList("Larry", "Kelly", "Curry");
+
+int[] ints = {1,2,3};
+List<Integer> list = Arrays.stream(ints).boxed().collect(Collectors.toList());
 ```
 
-####  
+#### 3. Sum int array
+
+```text
+int [] arr = {1,2,3,4};
+int sum = Arrays.stream(arr).sum();    // print: 10
+
+int sum = Arrays.stream(new int []{1,2,3,4}, 0, 2).sum(); 
+//print result of (1 + 2) : 3    
+```
+
+#### 4. Sort an ArrayList
+
+```text
+Collections.sort(ArrayList, Collections.reverseOrder());
+// Descending Order with Collections.reverseOrder();
+
+```
 
