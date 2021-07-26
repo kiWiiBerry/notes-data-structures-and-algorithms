@@ -4,7 +4,7 @@
 
 Leetcode 35:[ Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 
-#### Template:
+#### Template 0:
 
 ```text
 public int searchInsert(int[] nums, int target) {
@@ -37,6 +37,58 @@ public int searchInsert(int[] nums, int target) {
 #### More Related Problems:
 
 LC278: [First Bad Version](https://leetcode.com/problems/first-bad-version/)
+
+## Template 1
+
+模板一： 找特定值
+
+```text
+int target = value;
+int left = 0, right = nums.length - 1;
+while (left <= right) {       // !!!  left <= right 
+    int mid = left + (right - left) / 2;
+    if (nums[mid] == target) {
+        return mid;
+    } else if (nums[mid] > target) {
+        right = mid - 1;      // !!! right = mid - 
+    } else {
+        left = mid + 1;       // !!! left = mid + 1;
+    }
+}
+```
+
+## Template 2
+
+ 模板二：找下界（第一次出现）
+
+```text
+int left = 0, right = nums.length - 1;
+while (left < right) {
+    int mid = left + (right - left) / 2;
+    if (nums[mid] >= target) {
+        right = mid
+    } else {
+        left = mid + 1;
+    }
+}
+```
+
+## Template 3
+
+模板三：找上界（最后一次出现）
+
+```text
+int left = 0, right = nums.length - 1;
+while (left < right) {
+    int mid = left + (right - left) / 2 + 1;
+    if (nums[mid] <= target) {
+        left = mid;
+    } else {
+        right = mid - 1;
+    }
+```
+
+
 
 
 
