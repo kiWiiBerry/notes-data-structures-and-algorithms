@@ -6,7 +6,7 @@
   * [String, StringBuilder](data-structures/string.md)
   * [Queue and Stack](data-structures/abstract-data-types.md)
   * [Linked List](data-structures/linked-list.md)
-  * [HashMap](data-structures/hashmap.md)
+  * [HashMap / TreeMap](data-structures/hashmap.md)
   * [HashSet](data-structures/hashset.md)
   * [Binary Tree](data-structures/binary-tree.md)
   * [Trie](data-structures/trie.md)
