@@ -34,6 +34,19 @@ The list should be sorted before calling this method.
 // max​(Collection<? extends T> coll)
 ```
 
+* Sum
+
+```text
+int [] arr = {1,2,3,4};
+int sum = Arrays.stream(arr).sum(); 
+
+// stream(int[] array, int startInclusive, int endExclusive)t
+int sum = Arrays.stream(new int []{1,2,3,4}, 0, 2).sum(); //prints 3
+
+```
+
+
+
 * Frequency
 
 Return the frequency of a specific object.
